@@ -7,7 +7,6 @@
 }
 body {
   overflow-x: hidden;
-  overflow-y: hidden;
   scroll-behavior: smooth;
   background: #111;
 }
@@ -262,6 +261,88 @@ nav a:hover {
     height: 15px;
   }
 }
+@media screen and (max-width: 393px) {
+  nav {
+    background: #111;
+  }
+  nav .main-text {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    top: 35px;
+    font-size: 18px;
+    z-index: 3;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    background: rgba(20, 20, 20, 0.7);
+    top: 0px;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: all 1s;
+  }
+  nav ul.slide {
+    transform: translateX(0);
+  }
+  .menu-toggle {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    height: 20px;
+    top: 5px;
+    justify-content: space-between;
+    position: relative;
+    left: 38%;
+    z-index: 3;
+  }
+  .menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    left: -7px;
+    top: -2px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu-toggle span {
+    display: block;
+    width: 33px;
+    height: 3px;
+    background: #fff;
+  }
+  .content .pic1 {
+    position: absolute;
+    width: 70%;
+    top: 10%;
+  }
+  .introduction {
+    width: 100%;
+    margin-top: 135%;
+    left: 2%;
+  }
+  .introduction h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .introduction p {
+    font-size: 1.6rem;
+    white-space: nowrap;
+    margin-left: 12%;  
+  }
+  .cursor {
+    width: 5px;
+    height: 22px;
+  }
+}
 
 /* Halaman About Me */
 
@@ -369,40 +450,40 @@ nav a:hover {
 
 /* Query About */
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 393px) {
   .about .pic2 {
     position: absolute;
     width: 60%;
     height: auto;
-    left: -20%;
-    top: 10%;
+    left: -12%;
+    top: 5%;
   }
   .identitas {
     margin-left: 50px;
-    margin-top: 25rem;
+    margin-top: 30rem;
   }
   .identitas .writte-text2 {
-    font-size: 26px;
-    margin-bottom: 10%;
+    font-size: 35px;
+    margin-bottom: 5%;
     margin-left: 10%;
   }
   .identitas .cursor2 {
     width: 5px;
-    height: 35px;
-    margin-bottom: 10%;
+    height: 40px;
+    margin-bottom: 5%;
   }
   .identitas h3 {
-    font-size: 16px;
+    font-size: 25px;
     margin-left: 2%;
   }
   .paragraf {
     text-align: center;
-    width: 90%;
+    width: 100%;
     margin-left: -5%;
   }
   .paragraf p {
-    font-size: 14px;
-    margin-top: 70%;
+    font-size: 20px;
+    margin-top: 80%;
     margin-bottom: 20%;
   }
 }
@@ -537,8 +618,12 @@ nav a:hover {
     padding-left: 10px;
     padding-right: 10px;
   }
+  .layer {
+    height: auto;
+  }
   .layer h2 {
-    margin-bottom: -10px;
+    position: relative;
+    margin-bottom: 5rem;
   }
   .layer p {
     margin-top: -10%;
@@ -640,34 +725,34 @@ form .btn-btn2:hover {
   color: hsl(318, 94%, 61%);
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 393px) {
   html{
     overflow-x: hidden;
   }
   .contact {
-    padding-top: 35%;
+    padding-top: 15%;
   }
   .contact-left .sub-title {
-    font-size: 20px;
+    font-size: 32px;
   }
   .contact-left .email-ku {
-    font-size: 14px;
+    font-size: 18px;
   }
   .contact-left .email-ku i {
-    font-size: 16px;
+    font-size: 18px;
     margin-left: -10px;
   }
   .contact-left .telp {
-    font-size: 16px;
+    font-size: 18px;
   }
   .contact-left .telp i {
-    font-size: 16px;
+    font-size: 18px;
     margin-left: -10px;
   }
   .social-icons a {
-    font-size: 24px;
-    margin-left: 35px;
-    margin-top: -20px;
+    font-size: 34px;
+    margin-left: 50px;
+    margin-top: -5px;
     margin-bottom: 20px;
   }
   .contact-right form {
@@ -685,8 +770,9 @@ form .btn-btn2:hover {
   }
   form .btn-btn2 {
     padding: 8px 25px;
+    border-radius: 10px;
     font-size: 14px;
-    margin-top: -10px;
+    margin-top: 0px;
   }
   form .btn-btn2:hover {
     background: -webkit-linear-gradient(120deg, hsl(318, 94%, 61%), hsl(239, 69%, 51%));
@@ -698,5 +784,6 @@ form .btn-btn2:hover {
   }
   .copyright {
     width: auto;
+    background: none;
   }
 }
